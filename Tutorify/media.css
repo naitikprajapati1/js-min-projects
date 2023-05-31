@@ -1,0 +1,182 @@
+@media screen and (max-width: 780px) {
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.3rem;
+  }
+  h3 {
+    font-size: 1.8rem;
+  }
+  .heading {
+    font-size: 3.6rem;
+    font-weight: 600;
+  }
+  .nav-bar {
+    align-items: center;
+  }
+  .nav-items {
+    display: none;
+  }
+  .ham-burgur {
+    display: block;
+  }
+  .ham-burgur i {
+    font-size: 28px;
+    cursor: pointer;
+  }
+
+  .right-hero img {
+    width: 300px;
+  }
+  .turtorial-section {
+    align-items: flex-start;
+  }
+  .turtorial-left {
+    width: 60vw;
+  }
+  .tutorial-right img {
+    width: 100%;
+  }
+  .primary-btn {
+    font-size: 1.4rem;
+  }
+  .benifts-section {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .work-section {
+    flex-direction: column-reverse;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .work-left-section {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .hero-section {
+    flex-direction: column;
+  }
+  .left-hero {
+    width: 100%;
+  }
+  .secondary-btn {
+    width: 70%;
+  }
+  .right-hero img {
+    margin-top: 63px;
+  }
+  .turtorial-section {
+    flex-direction: column;
+  }
+  .turtorial-left {
+    width: 100%;
+  }
+  .benifts-section {
+    flex-direction: column-reverse;
+  }
+  .work-section {
+    flex-direction: column;
+  }
+  .benifts-section {
+    flex-direction: column-reverse;
+  }
+  .students {
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .left-s {
+    width: 100%;
+  }
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.6rem;
+  }
+  .branding-footer {
+    width: 100%;
+    align-items: center;
+  }
+  .offer-section{
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .left-offer-side{
+    width: 100%;
+  }
+  .benifits-l-sub{
+    display: block;
+    text-align: end;
+  }
+  .benifits-l-sub h3{
+    font-size: 3.3rem;
+  }
+
+  .benifts-section .benifts-left-section{
+        width: 100%;
+  }
+  .benifts-right-section h3 p{
+    display: none;
+  }
+  .benifts-section .benifts-right-section .box{
+    padding: 18px 20px;
+  }
+  .benifts-right-section {
+    padding-right: 0px;
+  }
+  .work-left-section h3{
+    font-size: 3rem;
+    text-align: center;
+  }
+  .left-s h3{
+    font-size: 2.6rem;
+  }
+}
+/* utility-class */
+
+.medium-font {
+  font-size: 1.6rem;
+  color: var(--light-dark);
+}
+.para-color {
+  color: #6c6c6c;
+}
+/* .primary-btn {
+  min-width: 100px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 10px 13px;
+  background-color: var(--primary);
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0px 4px 357px rgba(255, 146, 47, 0.15),
+    0px 0.500862px 44.7019px rgba(255, 146, 47, 0.075);
+}
+.secondary-btn {
+  min-width: 100px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 10px 16px;
+  background-color: var(--secondary);
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0px 85px 80px rgba(64, 127, 85, 0.08),
+    0px 25.625px 24.1177px rgba(64, 127, 85, 0.0521271),
+    0px 10.6433px 10.0172px rgba(64, 127, 85, 0.04),
+    0px 3.84948px 3.62304px rgba(64, 127, 85, 0.0278729);
+} */

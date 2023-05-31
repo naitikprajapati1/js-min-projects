@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TuTorify</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="media.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <style>
+
+ .menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.menu  li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 1px solid #f4f4f4;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.menu li a:hover,
+ .menu-btn:hover {
+  background-color: #f4f4f4;
+}
+
+ .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+/* menu */
+
+ .menu {
+    position: absolute;
+    top: 100px;
+    width: 100%;
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+ .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+ .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 3px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 21px;
+  font-size: 23px;
+  border-radius: 3px;
+  /* display:flex;
+  justify-content: center;
+  align-items:center; */
+  
+}
+
+ .menu-icon .navicon:before,
+ .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+ .menu-icon .navicon:before {
+  top: 5px;
+}
+
+ .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+ .menu-btn {
+  display: none;
+}
+
+ .menu-btn:checked ~ .menu {
+  max-height: 260px;
+}
+
+ .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+ .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+ .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+ .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+ .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+   li {
+    float: left;
+  }
+   li a {
+    padding: 20px 30px;
+  }
+   .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+   .menu-icon {
+    display: none;
+  }
+  .menu{
+    display: none;
+  }
+}
+
+  </style>
+</head>
+
+<body class="bg-[#fff]"  onscroll="scroller()">
+    <header>
+        <div class="nav-bar container flex">
+            <div class="brand-logo">
+                <h3>TUTORIFY</h3>
+            </div>
+            <div class="nav-items">
+                <ul class="flex  font">
+                    <li><a href="#" class="nav-links active">Home</a>
+                    </li>
+                    <li><a href="#" class="nav-links">Lessons</a></li>
+                    <li><a href="#" class="nav-links">Find Tutors</a></li>
+                    <li><a href="#" class="nav-links">About us</a></li>
+                    <li><button class="nav-links primary-btn">Login</button></a></li>
+                    <li><button class="nav-links secondary-btn">Signup</button></li>
+                </ul>
+            </div>
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn"><span  class="navicon"></span></label>
+            <ul class="menu">
+                <li><a href="#" class="">Home</a>
+                </li>
+                <li><a href="#" class="">Lessons</a></li>
+                <li><a href="#" class="">Find Tutors</a></li>
+                <li><a href="#" class="">About us</a></li>
+            </ul>
+            <!-- <a href="#" class="ham-burgur">
+              
+                <i class="fa-solid fa-bars"></i>
+            </a> -->
+        </div>
+        <!-- her--section -->
+        <section class="hero-section container flex">
+            <div class="left-hero flex">
+                <div class="combine flex">
+                    <p class="font font primary">We are The Best </p>
+                    <hr color="#fb9c46" style="    width: 30%;
+                    height: 2px;">
+                </div>
+                <h1>Learn Frome Home
+                    With <span class="primary"> The Best</span>
+                    Online Languange Tutors</h1>
+                <p class="light-dark medium-font">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Id interdum dui mollis . Suspendisse nulla :</p>
+                <a href="#">
+                    <button class="secondary-btn hero-btn">Try Free Lessons</button>
+                </a>
+            </div>
+            <div class="right-hero">
+                <img src="./img/Group 311 (1).svg" alt="">
+            </div>
+        </section>
+    </header>
+
+        <!--  -->
+        <section class="offer-section container flex">
+            <div class="left-offer-side">
+                <p class="medium-font primary">What do you want to learn ?</p>
+                <div class="heading">What We Offer</div>
+                <div class="combine flex">
+                    <p class="medium-font primary">We are The Best </p>
+                    <hr color="#fb9c46" style="    width: 30%;
+                    height: 2px;">
+                </div>
+            </div>
+            <div class="right-offer-side flex">
+                <p class="light-dark medium-font">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec urna nec faucibus ridiculus placerat ipsum. Volutpat eget ut vitae amet ullamcorper et, ante venenatis.</p>
+                <div class="contry-flags">
+                    <img src="./img/f1.svg" alt="">
+                    <img src="./img/f2.svg" alt="">
+                    <img src="./img/f5.svg" alt="">
+                    <img src="./img/f4 (1).svg" alt="">
+                    <img src="./img/f5.svg" alt="">
+                    <img src="./img/f2.svg" alt="">
+                    <img src="./img/f5.svg" alt="">
+                    <img src="./img/f4 (1).svg" alt="">
+                    <p class="medium-font primary"> View All
+                        <i class="fa-solid fa-play"></i>
+                    </p>
+                </div>
+            </div>
+            </section>
+
+    <!-- findturtorial section -->
+    <section class="turtorial-section container flex">
+        <div class="turtorial-left flex">
+            <p class="heading">Purchase your awesome lessons and find your tutors </p>
+            <p class="para-color medium-font">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem habitant a
+                tincidunt cras accumsan integer suscipit. Libero accumsan eget aliquet.</p>
+            <div class="btn-grp">
+                <button type="submit" class="primary-btn t-btn">Book Your Lessons</button>
+                <button type="submit" class="primary-btn t-btn">Find Your Lessons</button>
+            </div>
+        </div>
+        <div class="tutorial-right">
+            <img src="./img/findturtorial.svg" alt="">
+        </div>
+    </section>
+    <!-- benifits-section -->
+    <section class="benifts-section container flex">
+        <div class="benifts-left-section">
+            <!-- <div class="benifits-l-sub">
+            <h3 class="heading">What Will You <span class="green">Get</span> ?</h3>
+            <p class="para-color medium-font">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Id interdum dui mollis . Suspendisse nulla :</p>
+            </div> -->
+            <img src="./img/What will get section.png" alt="">
+        </div>
+        <div class="benifts-right-section flex">
+            <div class="benifits-l-sub">
+                <h3 class="heading">What Will You <span class="green">Get</span> ?</h3>
+                <p class="para-color medium-font">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Id interdum dui mollis . Suspendisse nulla :</p>
+                </div>
+            <!-- boxes -->
+            <div class="box-combine flex">
+                <div class="box box1 flex">
+                    <div>
+                        <img src="./img/Tick Square (1).svg" alt="">
+                    </div>
+                    <div>
+                        <p class="b-heading">1-on-1 lessons in more than 150 languages</p>
+                        <!-- <ul> -->
+                        <li class="para-color medium-font"
+                            style="list-style-type: disc; font-size: 1.4rem;text-overflow: ellipsis; padding-left:23px;">
+                            Learn from certified teachers with proven experience... <span class="green"> read
+                                more</span></li>
+                        <!-- </ul> -->
+                    </div>
+                </div>
+                <div class="box box2 flex">
+                    <div>
+                        <img src="./img/Tick Square (1).svg" alt="">
+                    </div>
+                    <div>
+                        <p class="b-heading">1-on-1 lessons in more than 150 languages</p>
+                        <!-- <ul> -->
+                        <li class="para-color medium-font"
+                            style="list-style-type: disc; font-size: 1.4rem;text-overflow: ellipsis; padding-left:23px;">
+                            Learn from certified teachers with proven experience... <span class="green"> read
+                                more</span></li>
+                        <!-- </ul> -->
+                    </div>
+                </div>
+                <div class="box box3 flex">
+                    <div>
+                        <img src="./img/Tick Square (1).svg" alt="">
+                    </div>
+                    <div>
+                        <p class="b-heading">1-on-1 lessons in more than 150 languages</p>
+                        <!-- <ul> -->
+                        <li class="para-color medium-font"
+                            style="list-style-type: disc; font-size: 1.4rem;text-overflow: ellipsis; padding-left:23px;">
+                            Learn from certified teachers with proven experience... <span class="green"> read
+                                more</span></li>
+                        <!-- </ul> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- work section -->
+    <section class="work-section container flex">
+            <div class="work-left-section flex">
+                <h3>Here’s how it <span class="primary">works</span> </h3>
+                <p class="para-color medium-font">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem habitant a tincidunt cras accumsan integer suscipit. Libero accumsan eget aliquet.</p>
+                <div class="box-combine flex">
+                    <div class="box box1 flex">
+                        <div>
+                            <img src="./img/user-icon.svg" alt="">
+                        </div>
+                        <div>
+                            <p class="work-card-heading primary">Find a tutor</p>
+                            <!-- <ul> -->
+                            <p class="work-card-para">
+                                Choose your ideal teacher from over 10,000 qualified language tutors.</p>
+                            <!-- </ul> -->
+                        </div>
+                    </div>
+                    <div class="box box2 flex">
+                        <div>
+                            <img src="./img/lesson-icon.svg" alt="">
+                        </div>
+                        <div>
+                            <p class="work-card-heading primary">Book a lesson                            </p>
+                            <!-- <ul> -->
+                            <p class="work-card-para">
+                                Select a lesson time and add it to their calendar.</p>
+                            <!-- </ul> -->
+                        </div>
+                    </div>
+                    <div class="box box3 flex">
+                        <div>
+                            <img src="./img/learning-icon.svg" alt="">
+                        </div>
+                        <div>
+                            <p class="work-card-heading primary">Start Learning</p>
+                            <!-- <ul> -->
+                            <p class="work-card-para">
+                                Simple as that, you’re learning a language.</p>
+                            <!-- </ul> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="work-right-section">
+                <img src="./img/work.svg" alt="">
+            </div>
+    </section>
+
+<!-- testominal section -->
+    <!-- <section class="testominal-section container flex">
+        <div class="testominal-left-section">
+        <h3 class="heading primary">
+            Edu Smart it's about mastering a timeless skill
+        </h3>
+        <p class="light-dark medium-font">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni rerum aspernatur qui ut accusamus beatae cum.</p>
+    </div>
+        <div class="testominal-right-section"></div>
+    </section> -->
+
+
+    <section class="students container flex">
+        <div class="left-s flex">
+            <h3 class="heading">Learn more than just a language 😍 </h3>
+            <p class="medium-font">Over 100,000 students join us monthly</p>
+            <div class="headshots">
+                <div class="head-combine flex">
+                    <img src="./img/head-grp.svg" alt="">
+                    <a href="#">and others</a>
+                </div>
+            </div>
+        </div>
+        <div class="right-s">
+            <button type="submit" class="primary-btn s-l-btn">Get your free lessons now</button>
+        </div>
+    </section>
+    <footer class="footer-main">
+            <div class="container flex footer-container">
+            <div class="branding-footer">
+            <a href="#" class="logos">
+                <h3>TUTORIFY</h3>
+            </a>
+            <p>Learn more than just
+                a language</p>
+                <div class="flex" style="gap: 1rem;">
+                    <a href="#" class="hover-links"><i class="fa-brands fa-facebook icons-a"></i></a>
+                    <a href="#" class="hover-links"><i class="fa-brands fa-twitter icons-a"></i></a>
+                    <a href="#" class="hover-links"><i class="fa-brands fa-youtube icons-a"></i></a>
+                    <a href="#" class="hover-links"><i class="fa-brands fa-discord icons-a"></i></a>
+                  </div>
+        </div>
+            <div class="link-column flex">
+                <h4>Find teachers</h4>
+                <a href="#" class="hover-links">English teachers</a>
+                <a href="#" class="hover-links">Chinese teachers</a>
+                <a href="#" class="hover-links">French teachers</a>
+                <a href="#" class="hover-links">Spanish teachers</a>
+                <a href="#" class="hover-links">other teachers</a>
+            </div>
+            <div class="link-column flex">
+                <h4>Lessons</h4>
+                <a href="#" class="hover-links">Learn English</a>
+                <a href="#" class="hover-links">Learn Chinese</a>
+                <a href="#" class="hover-links">Learn French</a>
+                <a href="#" class="hover-links">Learn Spanish</a>
+                <a href="#" class="hover-links">Learn More Languange</a>
+            </div>
+            <div class="link-column flex">
+                <h4>Company</h4>
+                <a href="#" class="hover-links">About</a>
+                <a href="#" class="hover-links">how it work</a>
+                <a href="#" class="hover-links">Term</a>
+                <a href="#" class="hover-links">Privacy policy</a>
+            </div>
+            <div class="link-column flex">
+                <h4>More</h4>
+                <a href="#" class="hover-links">Documentation</a>
+                <a href="#" class="hover-links">License</a>
+            </div>
+        </div>
+        <p class="medium-font ft-last">Copyright © 2023. Created by Naitik prajapati .</p>
+        <!-- </div> -->
+    </footer>
+
+<!-- <script>
+    function scroller() {
+      document.body.classList.remove('menu');
+      console.log('scroller');
+    }
+</script> -->
+</body>
+
+</html>
